@@ -1,3 +1,26 @@
+atom.input.bind(atom.key.LEFT_ARROW,'left');
+game= Object.create(Game.prototype);
+game.update = function(dt)
+{
+  if (atom.input.pressed('left'))
+  {
+    return console.log("player started moving left");
+  }
+};
+game.draw = function()
+{
+  atom.context.fillStyle = 'black';
+  return atom.context.fillRect(0, 0, atom.width, atom.height);
+};
+window.onblur = function()
+{
+  return game.stop();
+};
+window.onfocus = function()
+{
+  return game.run();
+};
+game.run();
 game = Object.create(Game.prototype);
 game.keys = ['A', 'S', 'D', 'F'];
 for (var i = 0; i < game.keys.length; i++){

@@ -70,9 +70,9 @@ game.draw = function() {
   };
   game.drawBackground = function(){
   atom.context.beginPath();
-  atom.context.fillStyle = '34e';
+  atom.context.fillStyle = '#34e';
   atom.context.fillRect(0, 0, atom.width, atom.height/2);
-  atom.context.fillStyle = 'ee3';
+  atom.context.fillStyle = '#ee3';
   atom.context.arc(140, atom.height/2 -30, 90, Math.PI*2, 0);
   atom.context.fill();
   atom.context.fillStyle = '#2e2';

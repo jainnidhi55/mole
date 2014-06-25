@@ -66,6 +66,9 @@ game.bop = {
   }
 }
 game.draw = function() {
+  this.drawBackground();
+  };
+  game.drawBackground = function(){
   atom.context.beginPath();
   atom.context.fillStyle = '34e';
   atom.context.fillRect(0, 0, atom.width, atom.height/2);
@@ -74,6 +77,7 @@ game.draw = function() {
   atom.context.fill();
   atom.context.fillStyle = '#2e2';
   atom.context.fillRect(0, atom.height/2, atom.width, atom.height/2);
+  }
 };
 game.makeHoles = function(labels, xOffset, yOffset){
   game.holes = [];
